@@ -21,7 +21,6 @@ The test suite validates:
 1. **Clone the repository**
 
 git clone <https://github.com/humayungit815/API-Automation-Test.git>
-cd TEST-AUTOMATION
 
 2. npm install
 
