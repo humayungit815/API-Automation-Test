@@ -23,16 +23,13 @@ The test suite validates:
 git clone <https://github.com/humayungit815/API-Automation-Test.git>
 cd TEST-AUTOMATION
 
-2. Install dependencies
-npm install
+2. npm install
 
-3. Install Playwright browsers 
-npx playwright install
+3. npx playwright install
 
 ## Steps to Execute the Tests
 
-4.  Runs All Tests
-npx playwright test
+1. npx playwright test
 or
 npx playwright test --ui
 
