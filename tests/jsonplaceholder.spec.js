@@ -1,7 +1,7 @@
 import {test, expect} from "@playwright/test";
 
 // GET users
-test("GET Request Users", async ({request}) => {
+test("GET Request Users-- Verify user list is returned", async ({request}) => {
 	const response = await request.get(
 		"https://jsonplaceholder.typicode.com/users"
 	);
@@ -14,7 +14,7 @@ test("GET Request Users", async ({request}) => {
 });
 
 // POST Create Users
-test("POST Request Users", async ({request}) => {
+test("POST Request Users-- Verify new user creation", async ({request}) => {
 	const payLoad = {
 		name: "Humayun",
 		job: "Automation Engineer",
@@ -35,7 +35,7 @@ test("POST Request Users", async ({request}) => {
 });
 
 // PUT Update Users
-test("PUT Request users", async ({request}) => {
+test("PUT Request users-- Verify user update", async ({request}) => {
 	const payLoad = {
 		name: "Humayun",
 		job: "Frontend Engineer",
@@ -56,7 +56,7 @@ test("PUT Request users", async ({request}) => {
 });
 
 // DELETE Users
-test("DELETE Request Users", async ({request}) => {
+test("DELETE Request Users-- Verify user deletion", async ({request}) => {
 	const response = await request.delete(
 		"https://jsonplaceholder.typicode.com/users/1"
 	);
@@ -65,7 +65,7 @@ test("DELETE Request Users", async ({request}) => {
 });
 
 // EDGE CASE: Invalid POST ID
-test("GET /users/999 - non existing id", async ({request}) => {
+test("GET /users/999 - Verify 404 for non-existing user", async ({request}) => {
 	const response = await request.get(
 		"https://jsonplaceholder.typicode.com/users/999"
 	);
@@ -77,7 +77,7 @@ test("GET /users/999 - non existing id", async ({request}) => {
 });
 
 // EDGE CASE: DELETE Without ID
-test("EDGE CASE DELETE- Without ID", async ({request}) => {
+test("EDGE CASE DELETE- Verify delete without ID fails", async ({request}) => {
 	const response = await request.delete(
 		"https://jsonplaceholder.typicode.com/users"
 	);
